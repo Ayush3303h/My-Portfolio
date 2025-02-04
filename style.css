@@ -56,6 +56,11 @@ header {
     transform: scale(1.1);
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav a {
     font-size: 1.8rem;
     color: black;
@@ -71,11 +76,23 @@ nav a.active {
     border-bottom: 3px solid #419bdb;
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.hamburger i {
+    font-size: 2.5rem;
+    color: black;
+}
+
 /* Mobile Menu Styles */
 @media (max-width: 995px) {
     nav {
+        display: none; /* Hide nav by default */
         position: absolute;
-        display: none;
         top: 0;
         right: 0;
         width: 60%;
@@ -83,12 +100,12 @@ nav a.active {
         border-bottom: 3px solid #419bdb;
         border-top-left-radius: 2rem;
         padding: 1rem;
-        background-color: #161616;
+        background-color: transparent;
         border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
 
     nav.active {
-        display: block;
+        display: block; /* Show nav when 'active' class is added */
     }
 
     nav a {
@@ -102,6 +119,11 @@ nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #419bdb;
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: block;
     }
 }
 
