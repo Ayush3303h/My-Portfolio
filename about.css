@@ -1,126 +1,278 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B'); 
-*{
-    margin:  0;
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none ;
+    text-decoration: none;
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-html{
-    font-size: 62.5%;
-     
+
+html {
+    font-size: 62.5%; /* Makes 1rem = 10px */
 }
-body{
+
+/* Body Styles */
+body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-image:linear-gradient(to right,#BB3D26,#193C6A);   
+    background-color: #f1f1f1;
+    background-image: url(sahu\ bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     color: white;
+    font-size: 1.6rem;
 }
-header{
+
+/* Header Styles */
+header {
     margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100% ;
-    padding: 1rem 9%;
+    width: 100%;
+    padding: 1rem 5%;
     background-color: transparent;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
-     
 }
-.logo{
+
+.logo {
     font-size: 3rem;
-    color:  #a1ceee;
+    color: #419bdb;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
-    
-
 }
-.logo:hover{
+
+.logo:hover {
     transform: scale(1.1);
-
 }
-nav a{
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
-    border-bottom: 3px solid transparent ;
+    border-bottom: 3px solid transparent;
 }
+
 nav a:hover,
-nav a.active{
-    color:  #a1ceee;
-    border-bottom: 3px solid  #a1ceee;
+nav a.active {
+    color: #419bdb;
+    border-bottom: 3px solid #419bdb;
 }
-@media(max-width:995px){
-    nav{
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.hamburger i {
+    font-size: 2.5rem;
+    color: black;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 995px) {
+    nav {
+        display: none; /* Hide nav by default */
         position: absolute;
-        display: none;
-        top: 0;  
+        top: 0;
         right: 0;
-        width: 40%;
-        border-left: 3px solid  #a1ceee;
-        border-bottom: 3px solid  #a1ceee;
+        width: 60%;
+        border-left: 3px solid #419bdb;
+        border-bottom: 3px solid #419bdb;
         border-top-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-
-         
-         
-
+        padding: 1rem;
+        background-color: transparent;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
-    nav.active{
+
+    nav.active {
+        display: block; /* Show nav when 'active' class is added */
+    }
+
+    nav a {
         display: block;
-
-
+        font-size: 2.2rem;
+        margin: 2rem 0;
     }
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0; 
 
-
-    }
     nav a:hover,
-    nav a.active{
+    nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid  #a1ceee;
+        border-bottom: 0.5rem solid #419bdb;
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: block;
     }
 }
-.image-section{
-    border: 2px solid black;
-    height: 55vw;
-    width: 45vw;
-    margin-left: 75px;
-    margin-top: 15%;
-    align-items: center;
-}
-.about-section{
-    border: 2px solid black;
-    height: 55vw;
-    width: 45vw;
-    margin-top: 15%;
-}
-.about{
 
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile First (max-width: 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Container and Boxes */
+.container {
     display: flex;
-    position: relative;
+    flex-wrap: wrap;
     justify-content: center;
-
+    padding-top: 150px; /* To avoid content being hidden under fixed header */
 }
-img{
-    width: 60%;
-    margin-left: 10%;
-    margin-top: 10%;
+
+.leftbox,
+.rightbox {
+    border: 1px solid white;
+    height: 40vw;
+    width: 30vw;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.leftbox {
+    margin-left: 2rem;
+}
+
+.rightbox {
+    overflow: hidden; /* Prevent any content from overflowing the rightbox */
+}
+
+.code-text {
+    width: 100%; /* Make code-text take full width of the container */
+    overflow-x: auto; /* Enable horizontal scroll for code if needed */
+}
+
+.purple {
+    color: #895499;
+}
+
+.orange {
+    color: #a9884b;
+}
+
+.green {
+    color: #78905b;
+}
+
+.light-orange {
+    color: #844d3f;
+}
+
+.blue {
+    color: #4e669a;
+}
+
+.pink {
+    color: #a4374d;
+}
+
+.light-blue {
+    color: rgb(34, 109, 239);
+}
+
+pre {
+    font-size: 1.1rem;
+    margin-top: 9px;
+    text-align: left;
+    word-wrap: break-word; /* Ensure text does not overflow */
+    white-space: pre-wrap; /* Allow long lines of code to wrap */
+    overflow-x: auto; /* Ensure horizontal scrolling if the code is long */
+}
+
+.leftbox img {
+    width: 70%;
+    height: 30vw;
+    max-width: 100%; /* Ensure the image does not stretch beyond its container */
+    margin: 70px auto; /* Center the image */
+    display: block; /* Make image block-level for better alignment */
+}
+
+/* Ensuring proper responsiveness */
+@media (max-width: 1024px) {
+    .leftbox,
+    .rightbox {
+        width: 40vw;
+        height: 45vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .leftbox,
+    .rightbox {
+        width: 60vw; /* Make both boxes more prominent on smaller screens */
+        height: auto;
+    }
+
+    .code-text {
+        padding: 1rem; /* Add padding to the code block */
+    }
+}
+
+@media (max-width: 480px) {
+    .leftbox,
+    .rightbox {
+        width: 80vw; /* Increase width for smaller devices */
+        height: auto;
+    }
+
+    .code-text {
+        padding: 1rem; /* Add padding to the code block */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    pre {
+        font-size: 1rem;
+    }
 }
