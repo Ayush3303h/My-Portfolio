@@ -11,10 +11,10 @@
 }
 
 html {
-    font-size: 62.5%; /* Makes 1rem = 10px */
+    font-size: 62.5%;
 }
 
-/* Body Styles */
+
 body {
     width: 100%;
     height: 100vh;
@@ -29,7 +29,7 @@ body {
     font-size: 1.6rem;
 }
 
-/* Header Styles */
+
 header {
     margin-top: 20px;
     position: fixed;
@@ -77,7 +77,7 @@ nav a.active {
     border-bottom: 3px solid #419bdb;
 }
 
-/* Hamburger Menu Styles */
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -89,10 +89,10 @@ nav a.active {
     color: black;
 }
 
-/* Mobile Menu Styles */
+
 @media (max-width: 995px) {
     nav {
-        display: none; /* Hide nav by default */
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -106,7 +106,7 @@ nav a.active {
     }
 
     nav.active {
-        display: block; /* Show nav when 'active' class is added */
+        display: block; 
     }
 
     nav a {
@@ -122,7 +122,7 @@ nav a.active {
         border-bottom: 0.5rem solid #419bdb;
     }
 
-    /* Show hamburger icon on mobile */
+
     .hamburger {
         display: block;
     }
@@ -146,7 +146,7 @@ nav a.active {
     }
 }
 
-/* Mobile First (max-width: 600px) */
+
 @media (max-width: 600px) {
     header {
         padding: 1rem 3%;
@@ -161,12 +161,12 @@ nav a.active {
     }
 }
 
-/* Container and Boxes */
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 150px; /* To avoid content being hidden under fixed header */
+    padding-top: 150px; 
 }
 
 .leftbox,
@@ -183,12 +183,14 @@ nav a.active {
 }
 
 .rightbox {
-    overflow: hidden; /* Prevent any content from overflowing the rightbox */
+    overflow: hidden; 
 }
 
 .code-text {
-    width: 100%; /* Make code-text take full width of the container */
-    overflow-x: auto; /* Enable horizontal scroll for code if needed */
+    width: 100%; 
+    overflow-x: auto; 
+    padding: 1rem; 
+    box-sizing: border-box; 
 }
 
 .purple {
@@ -218,25 +220,25 @@ nav a.active {
 .light-blue {
     color: rgb(34, 109, 239);
 }
-
 pre {
-    font-size: 1.1rem;
-    margin-top: 9px;
-    text-align: left;
-    word-wrap: break-word; /* Ensure text does not overflow */
-    white-space: pre-wrap; /* Allow long lines of code to wrap */
-    overflow-x: auto; /* Ensure horizontal scrolling if the code is long */
+    font-size: 1.1rem; 
+    margin-top: 39px;
+    text-align:center;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    overflow-x: auto; 
+    white-space: pre-line; 
 }
 
 .leftbox img {
     width: 70%;
     height: 30vw;
-    max-width: 100%; /* Ensure the image does not stretch beyond its container */
-    margin: 70px auto; /* Center the image */
-    display: block; /* Make image block-level for better alignment */
+    max-width: 100%; 
+    margin: 70px auto; 
+    display: block; 
 }
 
-/* Ensuring proper responsiveness */
+
 @media (max-width: 1024px) {
     .leftbox,
     .rightbox {
@@ -248,31 +250,40 @@ pre {
 @media (max-width: 768px) {
     .leftbox,
     .rightbox {
-        width: 60vw; /* Make both boxes more prominent on smaller screens */
+        width: 60vw; 
         height: auto;
     }
-
     .code-text {
-        padding: 1rem; /* Add padding to the code block */
+        padding: 1rem; 
+    }
+
+    pre {
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
     .leftbox,
     .rightbox {
-        width: 80vw; /* Increase width for smaller devices */
+        width: 80vw; 
         height: auto;
     }
-
     .code-text {
-        padding: 1rem; /* Add padding to the code block */
+        padding: 1rem;
     }
+
+    pre {
+        font-size: 0.9rem; 
+    }
+
 
     .container {
         flex-direction: column;
         align-items: center;
     }
-    pre {
-        font-size: 1rem;
+    .upperimage{
+        width: 100%;
     }
+
 }
+
