@@ -11,10 +11,10 @@
 }
 
 html {
-    font-size: 62.5%; /* Makes 1rem = 10px */
+    font-size: 62.5%;
 }
 
-/* Body Styles */
+
 body {
     width: 100%;
     height: 100vh;
@@ -28,7 +28,7 @@ body {
     color: white;
 }
 
-/* Header Styles */
+
 header {
     margin-top: 20px;
     position: fixed;
@@ -63,7 +63,7 @@ nav {
 
 nav a {
     font-size: 1.8rem;
-    color: black;
+    color: white;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
@@ -76,7 +76,7 @@ nav a.active {
     border-bottom: 3px solid #419bdb;
 }
 
-/* Hamburger Menu Styles */
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -88,10 +88,10 @@ nav a.active {
     color: black;
 }
 
-/* Mobile Menu Styles */
+
 @media (max-width: 995px) {
     nav {
-        display: none; /* Hide nav by default */
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -105,7 +105,7 @@ nav a.active {
     }
 
     nav.active {
-        display: block; /* Show nav when 'active' class is added */
+        display: block;
     }
 
     nav a {
@@ -121,19 +121,18 @@ nav a.active {
         border-bottom: 0.5rem solid #419bdb;
     }
 
-    /* Show hamburger icon on mobile */
     .hamburger {
         display: block;
     }
 }
 
-/* Section Styles */
+
 section {
     min-height: 100vh;
     padding: 5rem 9% 5rem;
 }
 
-/* Home Section */
+
 .home {
     display: flex;
     justify-content: center;
@@ -163,7 +162,7 @@ span {
     font-weight: 700;
 }
 
-/* Home Image */
+
 .home-img {
     border-radius: 50%;
 }
@@ -204,7 +203,7 @@ span {
     box-shadow: 0 0 25px #419bdb;
 }
 
-/* Button Styles */
+
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -226,7 +225,7 @@ span {
     box-shadow: 0 0 25px #419bdb;
 }
 
-/* Typing Text Animation */
+
 .typing-text {
     font-size: 3.4rem;
     font-weight: 600;
@@ -265,7 +264,7 @@ span {
         content: "Web Developer";
     }
     21%, 40% {
-        content: "Engineer";
+        content: "Software Developer";
     }
     41%, 60% {
         content: "Tech Enthusiast";
@@ -278,7 +277,6 @@ span {
     }
 }
 
-/* Responsive Media Queries */
 @media (max-width: 1000px) {
     .home {
         gap: 4rem;
@@ -348,7 +346,6 @@ span {
     }
 }
 
-/* Mobile First (max-width: 600px) */
 @media (max-width: 600px) {
     header {
         padding: 1rem 3%;
@@ -394,5 +391,4 @@ span {
         font-size: 1.3rem;
         padding: 0.8rem 1.5rem;
     }
-}
-
+}  
