@@ -1,0 +1,22 @@
+/* Temporary image styles */
+.upper-part {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 15vh;
+}
+
+.upper-part img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #419bdb;
+    margin-right: 20px;
+}
+
+.text-heading {
+    font-family: "Winky Sans", sans-serif;
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
