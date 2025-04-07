@@ -14,7 +14,6 @@ html {
     font-size: 62.5%;
 }
 
-
 body {
     width: 100%;
     height: 100vh;
@@ -28,7 +27,6 @@ body {
     color: white;
     font-size: 1.6rem;
 }
-
 
 header {
     margin-top: 20px;
@@ -77,7 +75,6 @@ nav a.active {
     border-bottom: 3px solid #419bdb;
 }
 
-
 .hamburger {
     display: none;
     cursor: pointer;
@@ -88,7 +85,6 @@ nav a.active {
     font-size: 2.5rem;
     color: black;
 }
-
 
 @media (max-width: 995px) {
     nav {
@@ -122,7 +118,6 @@ nav a.active {
         border-bottom: 0.5rem solid #419bdb;
     }
 
-
     .hamburger {
         display: block;
     }
@@ -146,7 +141,6 @@ nav a.active {
     }
 }
 
-
 @media (max-width: 600px) {
     header {
         padding: 1rem 3%;
@@ -161,129 +155,112 @@ nav a.active {
     }
 }
 
+@keyframes blurReveal {
+    0% {
+        filter: blur(12px);
+        clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        filter: blur(0);
+        clip-path: inset(0 0 0 0);
+    }
+}
 
-.container {
+.text-heading{
+    text-align: center;
+    margin-top: 10vw;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    width: 100%;
+    position: fixed;
+    color: white;
+    animation: blurReveal 1.5s ease-out forwards;
+}
+
+.text-para {
+    text-align: center;
+    margin-top: 2rem;
+    max-width: 60vw;
+    font-size: 1.6rem;
+    display: block;
+    margin-left: 20vw;
+}
+
+/* Container styles */
+.badge-container {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
-    padding-top: 150px; 
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.leftbox,
-.rightbox {
-    border: 1px solid white;
-    height: 40vw;
-    width: 30vw;
-    margin-top: 30px;
-    margin-bottom: 20px;
+/* Responsive */
+@media (max-width: 1285px) {
+    .badge-container {
+        padding-left: 6rem; /* 96px */
+        padding-right: 6rem;
+    }
 }
-
-.leftbox {
-    margin-left: 2rem;
-}
-
-.rightbox {
-    overflow: hidden; 
-}
-
-.code-text {
-    width: 100%; 
-    overflow-x: auto; 
-    padding: 1rem; 
-    box-sizing: border-box; 
-}
-
-.purple {
-    color: #895499;
-}
-
-.orange {
-    color: #a9884b;
-}
-
-.green {
-    color: #78905b;
-}
-
-.light-orange {
-    color: #844d3f;
-}
-
-.blue {
-    color: #4e669a;
-}
-
-.pink {
-    color: #a4374d;
-}
-
-.light-blue {
-    color: rgb(34, 109, 239);
-}
-pre {
-    font-size: 1.1rem; 
-    margin-top: 39px;
-    text-align:center;
-    word-wrap: break-word;
-    white-space: pre-wrap; 
-    overflow-x: auto; 
-    white-space: pre-line; 
-}
-
-.leftbox img {
-    width: 70%;
-    height: 30vw;
-    max-width: 100%; 
-    margin: 70px auto; 
-    display: block; 
-}
-
 
 @media (max-width: 1024px) {
-    .leftbox,
-    .rightbox {
-        width: 40vw;
-        height: 45vw;
+    .badge-container {
+        flex-direction: row;
+        padding-left: 7rem; /* 112px */
+        padding-right: 7rem;
     }
 }
 
-@media (max-width: 768px) {
-    .leftbox,
-    .rightbox {
-        width: 60vw; 
-        height: auto;
-    }
-    .code-text {
-        padding: 1rem; 
+@media (max-width: 640px) {
+    .badge-container {
+        flex-direction: row;
+        padding-left: 1.5rem; /* 24px */
+        padding-right: 1.5rem;
     }
 
-    pre {
-        font-size: 0.95rem;
+    .badge {
+        font-size: 10px;
     }
 }
 
-@media (max-width: 480px) {
-    .leftbox,
-    .rightbox {
-        width: 80vw; 
-        height: auto;
-    }
-    .code-text {
-        padding: 1rem;
-    }
+/* Badge styles */
+.badge {
+    font-size: 1.3rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    background-color: #1f2937;
+    color: white;
+    border-radius: 0.6rem;
+    transition: all 0.2s;
+    margin: 0.5rem;
+    flex: 0 0 auto;
+    font-weight: 500;
+}
 
-    pre {
-        font-size: 0.9rem; 
-    }
+.badge:hover {
+    background-color: #374151; /* slightly lighter gray for hover */
+}
 
-
-    .container {
-        flex-direction: column;
-        align-items: center;
+@media (prefers-color-scheme: dark) {
+    .badge:hover {
+        background-color: #d1d5db; /* Tailwind gray-300 for dark mode */
+        color: black;
     }
-    .upperimage{
-        width: 100%;
-    }
+}
 
+.skills {
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 60px;
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.1rem;
+    border-bottom: 3px solid #419bdb;
+    display: inline-block;
+    width: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
